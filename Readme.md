@@ -6,6 +6,8 @@
 
 2. 修改 script.js 文件画图/表数据，展示结果
 
+3. 展示数据表，对于 out-of-line 的数据，用 ref link 链接到新的 webpage 展示文本。模仿数据库的 out-of-line reference。
+
 <h2> 关键功能 </h2>
 
 1. 读取、执行 Query
@@ -16,7 +18,6 @@
 
 3. 结果展示
 
-4. 展示数据表，对于 out-of-line 的数据，用 ref link 链接到新的 webpage 展示文本。模仿数据库的 out-of-line reference。
 
 <h2> 不关键的功能 </h2>
 
