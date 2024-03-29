@@ -16,6 +16,8 @@
 
 3. 结果展示
 
+4. 展示数据表，对于 out-of-line 的数据，用 ref link 链接到新的 webpage 展示文本。模仿数据库的 out-of-line reference。
+
 <h2> 不关键的功能 </h2>
 
 1. 展示所有数据库
