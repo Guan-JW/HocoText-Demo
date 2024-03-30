@@ -444,7 +444,7 @@ $(function () {
         resultButton.classList.remove('bg-white-500', 'hover:bg-gray-300', 'text-gray', 'hover:text-black')
         resultButton.classList.add('bg-white', 'hover:bg-white', 'text-black');
     
-        WriteDBInfo();
+        WriteQueryResultInfo();
         has_comp_result = false;
         has_eval_result = true;
       }
