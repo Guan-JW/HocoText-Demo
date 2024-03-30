@@ -355,7 +355,7 @@ $(function () {
         $('.table-wrapper').hide();
 
         // Determine which table to show based on the selectedText
-        if(selectedText === "DB-Test") {
+        if(selectedText === "DNA_EXP") {  /* TODO: modify databse name here */
             $('#table-container-test').show();
         } else if(selectedText === "XML") {
             $('#table-container-xml').show(); // Make sure to have this table in your HTML
@@ -545,9 +545,22 @@ $(function () {
   function WriteDBInfo() {
     clearBoard();
     /* TODO: check! database, table, query type. */
+
+    const sampleData = [
+      { seq_id: 1, exp_date: '2023-03-25', seq_data: 'ACTGACTGACTG...', quality_score: 95.5, exp_log: 'Successful sequencing...' },
+      { seq_id: 2, exp_date: '2023-03-26', seq_data: 'TTGCACTGACTG...', quality_score: 92.3, exp_log: 'Minor errors noted...' },
+      { seq_id: 3, exp_date: '2023-03-27', seq_data: 'GGACTGACTGAC...', quality_score: 89.7, exp_log: 'Repeated sequencing required...' },
+      { seq_id: 4, exp_date: '2023-03-28', seq_data: 'CCAGTGACTGAC...', quality_score: 93.2, exp_log: 'High-quality sequencing data...' },
+      { seq_id: 5, exp_date: '2023-03-29', seq_data: 'ACTGACTGACTG...', quality_score: 94.8, exp_log: 'Sequencing completed with no issues...' },
+      { seq_id: 6, exp_date: '2023-03-30', seq_data: 'GACTGACTGACC...', quality_score: 88.4, exp_log: 'Sequencing partially successful...' },
+      { seq_id: 7, exp_date: '2023-03-31', seq_data: 'TTGCACTGACCA...', quality_score: 91.1, exp_log: 'Minor quality issues detected...' },
+      { seq_id: 8, exp_date: '2023-04-01', seq_data: 'CCAGTGACTGCA...', quality_score: 92.5, exp_log: 'Optimal sequencing results...' },
+      { seq_id: 9, exp_date: '2023-04-02', seq_data: 'ACTGACAGACTA...', quality_score: 90.3, exp_log: 'Requires verification sequencing...' },
+      { seq_id: 10, exp_date: '2023-04-03', seq_data: 'GACTGACCCACT...', quality_score: 87.8, exp_log: 'Completed with noted anomalies...' }
+    ];
+
     var txt;
     
-    // txt = '';
     txt = '<html lang="en-US">';
     txt = txt + '<head>';
     txt = txt + '<style>';
@@ -565,90 +578,28 @@ $(function () {
     txt = txt + '<body>';
 
     /* TODO: Replace record number and runtime */
-    txt = txt + '<div style="margin-top:10px; margin-bottom:10px;"> Number of Records: 5  &emsp; &emsp; Runtime: 10ms </div>';
+    txt = txt + '<div style="margin-top:10px; margin-bottom:10px;"> Number of Records: 10  &emsp; &emsp; Runtime: 10ms </div>';
     txt = txt + '<table class="w3-table-all notranslate">';
     txt = txt + '<tbody>';
     txt = txt + '<tr>';
-    txt = txt + '<th align="left">CustomerID</th>';
-    txt = txt + '<th align="left">CustomerName</th>';
-    txt = txt + '<th align="left">ContactName</th>';
-    txt = txt + '<th align="left">Address</th>';
-    txt = txt + '<th align="left">City</th>';
-    txt = txt + '<th align="left">PostalCode</th>';
-    txt = txt + '<th align="left">Country</th>';
+    txt = txt + '<th align="center">seq_id</th>';
+    txt = txt + '<th align="center">exp_date</th>';
+    txt = txt + '<th align="center">seq_data</th>';
+    txt = txt + '<th align="center">quality_score</th>';
+    txt = txt + '<th align="center">exp_log</th>';
     txt = txt + '</tr>';
-    txt = txt + '<tr>';
-    txt = txt + '<td valign="top">1&nbsp;</td>';
-    txt = txt + '<td valign="top">Alfreds Futterkiste&nbsp;</td>';
-    txt = txt + '<td valign="top">Maria Anders&nbsp;</td>';
-    txt = txt + '<td valign="top">Obere Str. 57&nbsp;</td>';
-    txt = txt + '<td valign="top">Berlin&nbsp;</td>';
-    txt = txt + '<td valign="top">12209&nbsp;</td>';
-    txt = txt + '<td valign="top">Germany&nbsp;</td>';
-    txt = txt + '</tr>';
-    txt = txt + '<tr>';
-    txt = txt + '<td valign="top">1&nbsp;</td>';
-    txt = txt + '<td valign="top">Alfreds Futterkiste&nbsp;</td>';
-    txt = txt + '<td valign="top">Maria Anders&nbsp;</td>';
-    txt = txt + '<td valign="top">Obere Str. 57&nbsp;</td>';
-    txt = txt + '<td valign="top">Berlin&nbsp;</td>';
-    txt = txt + '<td valign="top">12209&nbsp;</td>';
-    txt = txt + '<td valign="top">Germany&nbsp;</td>';
-    txt = txt + '</tr>';
-    txt = txt + '<tr>';
-    txt = txt + '<td valign="top">1&nbsp;</td>';
-    txt = txt + '<td valign="top">Alfreds Futterkiste&nbsp;</td>';
-    txt = txt + '<td valign="top">Maria Anders&nbsp;</td>';
-    txt = txt + '<td valign="top">Obere Str. 57&nbsp;</td>';
-    txt = txt + '<td valign="top">Berlin&nbsp;</td>';
-    txt = txt + '<td valign="top">12209&nbsp;</td>';
-    txt = txt + '<td valign="top">Germany&nbsp;</td>';
-    txt = txt + '</tr>';
-    txt = txt + '<tr>';
-    txt = txt + '<td valign="top">1&nbsp;</td>';
-    txt = txt + '<td valign="top">Alfreds Futterkiste&nbsp;</td>';
-    txt = txt + '<td valign="top">Maria Anders&nbsp;</td>';
-    txt = txt + '<td valign="top">Obere Str. 57&nbsp;</td>';
-    txt = txt + '<td valign="top">Berlin&nbsp;</td>';
-    txt = txt + '<td valign="top">12209&nbsp;</td>';
-    txt = txt + '<td valign="top">Germany&nbsp;</td>';
-    txt = txt + '</tr>';
-    txt = txt + '<tr>';
-    txt = txt + '<td valign="top">1&nbsp;</td>';
-    txt = txt + '<td valign="top">Alfreds Futterkiste&nbsp;</td>';
-    txt = txt + '<td valign="top">Maria Anders&nbsp;</td>';
-    txt = txt + '<td valign="top">Obere Str. 57&nbsp;</td>';
-    txt = txt + '<td valign="top">Berlin&nbsp;</td>';
-    txt = txt + '<td valign="top">12209&nbsp;</td>';
-    txt = txt + '<td valign="top">Germany&nbsp;</td>';
-    txt = txt + '</tr>';
-    txt = txt + '<tr>';
-    txt = txt + '<td valign="top">1&nbsp;</td>';
-    txt = txt + '<td valign="top">Alfreds Futterkiste&nbsp;</td>';
-    txt = txt + '<td valign="top">Maria Anders&nbsp;</td>';
-    txt = txt + '<td valign="top">Obere Str. 57&nbsp;</td>';
-    txt = txt + '<td valign="top">Berlin&nbsp;</td>';
-    txt = txt + '<td valign="top">12209&nbsp;</td>';
-    txt = txt + '<td valign="top">Germany&nbsp;</td>';
-    txt = txt + '</tr>';
-    txt = txt + '<tr>';
-    txt = txt + '<td valign="top">1&nbsp;</td>';
-    txt = txt + '<td valign="top">Alfreds Futterkiste&nbsp;</td>';
-    txt = txt + '<td valign="top">Maria Anders&nbsp;</td>';
-    txt = txt + '<td valign="top">Obere Str. 57&nbsp;</td>';
-    txt = txt + '<td valign="top">Berlin&nbsp;</td>';
-    txt = txt + '<td valign="top">12209&nbsp;</td>';
-    txt = txt + '<td valign="top">Germany&nbsp;</td>';
-    txt = txt + '</tr>';
-    txt = txt + '<tr>';
-    txt = txt + '<td valign="top">1&nbsp;</td>';
-    txt = txt + '<td valign="top">Alfreds Futterkiste&nbsp;</td>';
-    txt = txt + '<td valign="top">Maria Anders&nbsp;</td>';
-    txt = txt + '<td valign="top">Obere Str. 57&nbsp;</td>';
-    txt = txt + '<td valign="top">Berlin&nbsp;</td>';
-    txt = txt + '<td valign="top">12209&nbsp;</td>';
-    txt = txt + '<td valign="top">Germany&nbsp;</td>';
-    txt = txt + '</tr>';
+
+    // Appending sample data to txt
+    sampleData.forEach(data => {
+      txt += '<tr>';
+      txt += `<td align="center">${data.seq_id}</td>`;
+      txt += `<td align="center">${data.exp_date}</td>`;
+      txt += `<td align="center"><a href="url_to_seq_data_page?seq_id=${data.seq_id}" target="_blank">${data.seq_data}</a></td>`;
+      txt += `<td align="center">${data.quality_score}</td>`;
+      txt += `<td align="center"><a href="url_to_exp_log_page?seq_id=${data.seq_id}" target="_blank">${data.exp_log}</a></td>`;
+      txt += '</tr>';
+    });
+
     txt = txt + '</tbody>'
     txt = txt + '</table>'
     txt = txt + '<div id="gtx-trans" style="position: absolute; left: 589px; top: 65px;>'
@@ -686,13 +637,11 @@ $(function () {
     txt = txt + '<table class="w3-table-all notranslate">';
     txt = txt + '<tbody>';
     txt = txt + '<tr>';
-    txt = txt + '<th align="left">CustomerID</th>';
-    txt = txt + '<th align="left">CustomerName</th>';
-    txt = txt + '<th align="left">ContactName</th>';
-    txt = txt + '<th align="left">Address</th>';
-    txt = txt + '<th align="left">City</th>';
-    txt = txt + '<th align="left">PostalCode</th>';
-    txt = txt + '<th align="left">Country</th>';
+    txt = txt + '<th align="center">seq_id</th>';
+    txt = txt + '<th align="center">exp_date</th>';
+    txt = txt + '<th align="center">seq_data</th>';
+    txt = txt + '<th align="center">quality_score</th>';
+    txt = txt + '<th align="center">exp_log</th>';
     txt = txt + '</tr>';
     txt = txt + '</tbody>'
     txt = txt + '</table>'
