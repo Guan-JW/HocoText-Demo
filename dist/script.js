@@ -1097,8 +1097,8 @@ var errorBarsPlugin = {
 /* TODO: Generate new chart */
 /* TODO-later: automatically adujst figure width and placement */
 myData = {
-  labels: [[["TEXT", "PGLZ", "RLE", "TADOC"], "Col 1"], [["TEXT", "PGLZ", "RLE", "TADOC"], "Col 2"]], /* TODO: adjust */
-  // labels: [[[], ["Col 1"]], "Col 2"],
+  labels: [[["TEXT", "PGLZ", "RLE", "TADOC"], "seq_data"], [["TEXT", "PGLZ", "RLE", "TADOC"], "exp_log"]], /* TODO: adjust */
+  // labels: [[[], ["seq_data"]], "exp_log"],
   /* TODO: adjust */
   datasets: [
     {
@@ -1183,8 +1183,8 @@ var myChart = new Chart(ctx, myChartConfig);
 /* Chart 2 */
 /* bar chart with error */
 errorData = {
-  labels: [[["TEXT", "PGLZ", "RLE", "TADOC"], "Col 1"], [["TEXT", "PGLZ", "RLE", "TADOC"], "Col 2"]], /* TODO: adjust */
-  // labels: [[[], ["Col 1"]], "Col 2"],
+  labels: [[["TEXT", "PGLZ", "RLE", "TADOC"], "seq_data"], [["TEXT", "PGLZ", "RLE", "TADOC"], "exp_log"]], /* TODO: adjust */
+  // labels: [[[], ["seq_data"]], "exp_log"],
   /* TODO: adjust */
   datasets: [
   {
